@@ -1,0 +1,22 @@
+<p>Employee Form</p>
+<div class="card p-2">
+   <div class="card-body">
+    <form [formGroup]="UserForm">
+        <label>Name:</label>
+        <input class="form-control"   formControlName="Name" placeholder="Enter your Name" type="text"> 
+        <label>PhoneNumber:</label>
+        <input class="form-control" formControlName="PhoneNumber"  placeholder="Enter your phoneNumber" type="text">
+        <label>Email:</label>
+        <input class="form-control" formControlName="Email"  placeholder="Enter your Email" type="text">
+        <label>Department:</label>
+        <input class="form-control" formControlName="Department"  placeholder="Enter your Department" type="text">
+        <label>Designation:</label>
+        <input class="form-control" formControlName="Designation"  placeholder="Enter your Designation" type="text">
+        <br>
+        <button class="btn btn-primary" *ngIf="isUpdate" (click)="update()">update</button>&nbsp;
+        <button class="btn btn-primary" *ngIf="!isUpdate" (click)="onSubmit()">Submit</button>&nbsp;
+        <button class="btn btn-success" (click)="onBack()">Back</button>
+    </form>
+   </div>
+</div>
+ 
